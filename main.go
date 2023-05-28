@@ -6,11 +6,16 @@ import (
 	"net/http"
 )
 
+func SubscribeHandler(w http.ResponseWriter, r *http.Request) {
+}
+
 func main() {
 
 	fileServer := http.FileServer(http.Dir("./static"))
 
 	http.Handle("/", fileServer)
+
+	http.HandleFunc("/subscribe", SubscribeHandler)
 
 	fmt.Println("Starting server at Port 8080")
 
