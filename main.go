@@ -7,6 +7,15 @@ import (
 )
 
 func SubscribeHandler(w http.ResponseWriter, r *http.Request) {
+	if err := r.ParseForm(); err != nil {
+		fmt.Fprintf(w, "Parse Form error : %v", err)
+		log.Fatal(err)
+	}
+	fmt.Fprintf(w, "Post request succesfull \n")
+
+	name := r.FormValue("name")
+	email := r.FormValue("email")
+	fmt.Fprintf(w, "Form submitted with name %v and email %v", name, email)
 }
 
 func main() {

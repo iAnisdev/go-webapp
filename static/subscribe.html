@@ -44,14 +44,14 @@
             </header>
 
             <main class="px-3">
-                <form>
+                <form method="post" action="/subscribe">
                     <div class="form-floating">
-                      <input type="text" class="form-control" id="floatingInput" placeholder="Enter your name">
-                      <label for="floatingInput">Name</label>
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
+                      <label for="name">Name</label>
                     </div>
                     <div class="form-floating mt-4">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="Enter your email">
-                      <label for="floatingPassword">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+                      <label for="email">Email</label>
                     </div>
                 
                     <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">Send me Email Letters</button>
